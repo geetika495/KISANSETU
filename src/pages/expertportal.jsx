@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './ExpertPortal.css'
+import './expertportal.css'
 
 const ExpertPortal = ({ onBackToRoles, onLogout }) => {
   const [selectedFeature, setSelectedFeature] = useState(null)
