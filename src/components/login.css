@@ -1,0 +1,278 @@
+/* Login & Registration Styles */
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(135deg, 
+      #1B5E20 0%, 
+      #2E7D32 25%, 
+      #388E3C 50%, 
+      #4CAF50 75%, 
+      #66BB6A 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 0%, transparent 50%);
+  animation: pulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.main-title {
+  color: #1B5E20;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #1B5E20, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-label {
+  display: block;
+  color: #2E7D32;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #E8F5E8;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2E7D32;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4CAF50;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.input-field::placeholder {
+  color: #A5D6A7;
+}
+
+/* Select dropdown styling */
+.input-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%232E7D32' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+  padding-right: 40px;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot-link {
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #45A049, #1B5E20);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, 
+    transparent, 
+    #4CAF50, 
+    transparent);
+  margin: 25px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider span {
+  background: white;
+  padding: 0 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.switch-auth {
+  margin-bottom: 25px;
+}
+
+.switch-auth p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.switch-button:hover {
+  color: #2E7D32;
+}
+
+.image-password-section {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #E8F5E8;
+}
+
+.image-password-text {
+  color: #2E7D32;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.helper-text {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Terms and Conditions */
+.terms-agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.terms-agreement input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+.terms-agreement label {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.terms-agreement a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.terms-agreement a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 40px 30px;
+    margin: 20px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .input-field {
+    padding: 12px 15px;
+  }
+}
